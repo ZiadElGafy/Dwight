@@ -5,7 +5,7 @@ Your everyday personal assistant
 # Dependencies
 
 To check python version
->python -v
+>python -V
 
 To find where python is located
 
