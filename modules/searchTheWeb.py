@@ -17,9 +17,10 @@ def search(text):
     
     webbrowser.get(chrome_path).open_new(url)
     
-def driver():
-    search_text = input("Enter text to search for: ")
-    browser_thread = threading.Thread(target=search, args=(search_text,))
+def driver(text):
+    if not text:
+        text = input("Enter text to search for: ")
+    browser_thread = threading.Thread(target=search, args=(text,))
     # Allow thread to run even after program exits
     browser_thread.daemon = True
     browser_thread.start()

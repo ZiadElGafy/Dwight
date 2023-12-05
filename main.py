@@ -1,4 +1,5 @@
-from modules.searchTheWeb import driver as searchTheWebDriver
+from modules.googleMeet import driver as google_meet_driver
+from modules.searchTheWeb import driver as search_the_web_driver
 
 def get_input_option(number_of_options):
     try:
@@ -21,7 +22,10 @@ def main():
     op = get_input_option((len(options)))
 
     if options[op] == "Search the web":
-        searchTheWebDriver()
+        search_the_web_driver("")
+    elif options[op] == 'Schedule a google meet':
+        google_meet_driver()
+
 
 if __name__ == "__main__":
     main()

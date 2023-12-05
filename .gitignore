@@ -1,3 +1,4 @@
-modules/token.json
-modules/credentials.json
+token.json
+token.pickle
+credentials.json
 modules/__pycache__
