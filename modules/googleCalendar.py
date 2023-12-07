@@ -1,5 +1,7 @@
 import datetime
 import os.path
+import time
+import tzlocal
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -11,8 +13,8 @@ from datetime import datetime
 from datetime import timedelta
 from dateutil import parser
 
-TIMEZONE = "Africa/Cairo" # Find your timezone here "https://www.timezoneconverter.com/cgi-bin/zonehelp.tzc"
-TIMEZONE_OFFSET = 2 # The offset of your timezone (e.g. GMT + 5 would be 5)
+TIMEZONE = tzlocal.get_localzone()
+TIMEZONE_OFFSET = (-time.timezone) / (60 * 60)
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/calendar"]

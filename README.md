@@ -28,3 +28,13 @@ To copy google meet link
 - pyperclip
 
 ---
+
+To store environment variables
+> pip install python-dotenv
+- python-dotenv
+
+---
+
+To get local timezone
+> pip install tzlocal
+- tzlocal

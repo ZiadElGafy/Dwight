@@ -2,7 +2,11 @@ import webbrowser
 import threading
 import time
 
-chrome_path = "C:/Program Files/Google/Chrome/Application/chrome.exe %s"
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+BROWSER_PATH = os.getenv("BROWSER_PATH")
 
 def search(text):
     words = text.split(" ")
@@ -15,7 +19,7 @@ def search(text):
         for i in range(len(words) - 1):
             url = url + '+' + words[i + 1]
     
-    webbrowser.get(chrome_path).open_new(url)
+    webbrowser.get(BROWSER_PATH).open_new(url)
     
 def driver(text):
     if not text:
