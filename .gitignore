@@ -2,4 +2,4 @@ token.json
 token.pickle
 credentials.json
 modules/__pycache__
-.env
+dotenv.env
