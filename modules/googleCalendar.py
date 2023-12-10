@@ -39,7 +39,7 @@ def get_credentials():
     return creds
 
 def create_event():
-    # title, descriotion, date, start, duration
+    # title, description, date, start, duration
     title = input("Enter event title: ")
     description = input("Enter event description: ")
     date = input("Enter event date (YYYY-MM-DD): ")
