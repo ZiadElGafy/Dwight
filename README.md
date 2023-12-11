@@ -33,16 +33,6 @@ To get local timezone
 
 ---
 
-Steps to get the prayer times api key
-
-1. Head to [rapidapi](https://rapidapi.com)
-2. Create an account and log in
-3. Head to the [developer dashboard](https://rapidapi.com/developer)
-4. Click on the dropdown menu under the application under "My Apps"
-5. Click on "Authorization"
-
----
-
 To get location
 
 > pip install geocoder

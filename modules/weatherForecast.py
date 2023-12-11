@@ -41,5 +41,7 @@ def driver():
     forecast = get_forecast(response)
     print(forecast)
     choice = input("Would you like to know more weather data? [y/n] ")
+    while choice != 'y' and choice != 'n':
+        choice = input("Would you like to know more weather data? [y/n] ")
     if choice == 'y':
         search_the_web_driver("Weather")
