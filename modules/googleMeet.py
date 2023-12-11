@@ -1,12 +1,12 @@
 import os
 import pickle
 import datetime
-import pyperclip
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
-from .searchTheWeb import driver as search_the_web_driver
+from tools.copyToClipboard import copy_to_clipboard
+from modules.searchTheWeb import driver as search_the_web_driver
 
 SCOPES = ['https://www.googleapis.com/auth/calendar.events']
 
@@ -58,9 +58,6 @@ def create_meeting_link(creds):
 
     meeting_link = event['hangoutLink']
     return meeting_link
-
-def copy_to_clipboard(text_to_copy):
-    pyperclip.copy(text_to_copy)
 
 def driver():
     creds = get_credentials()
