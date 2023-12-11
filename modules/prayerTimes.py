@@ -2,6 +2,7 @@ import requests
 import datetime
 import time
 from tools.getCoordinates import driver as get_coordinates
+from tools.say import driver as say
 
 API_CALL_LIMIT = 1e3
 
@@ -65,7 +66,7 @@ def driver():
 	hours_left = prayer_times[0][2] // (60 * 60)
 	minutes_left = prayer_times[0][2] // 60 % 60
 
-	print(f"{hours_left} hours and {minutes_left} minutes till {next_prayer[0]}")
+	say(f"{hours_left} hours and {minutes_left} minutes till {next_prayer[0]}")
 	print(prayer_times)
 	
 	return prayer_times

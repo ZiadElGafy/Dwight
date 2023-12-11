@@ -6,6 +6,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from tools.copyToClipboard import driver as copy_to_clipboard
+from tools.say import driver as say
 from modules.searchTheWeb import driver as search_the_web_driver
 
 SCOPES = ['https://www.googleapis.com/auth/calendar.events']
@@ -31,37 +32,45 @@ def get_credentials():
     return creds
 
 def create_meeting_link(creds):
-    service = build('calendar', 'v3', credentials=creds)
-    event = {
-        'summary': 'Google Meet Event',
-        'description': 'This is a Google Meet event.',
-        'start': {
-            'dateTime': '2023-01-01T10:00:00',
-            'timeZone': 'UTC',
-        },
-        'end': {
-            'dateTime': '2023-01-01T11:00:00',
-            'timeZone': 'UTC',
-        },
-        'conferenceData': {
-            'createRequest': {
-                'requestId': 'abcd1234',
+    try:
+        service = build('calendar', 'v3', credentials=creds)
+        event = {
+            'summary': 'Google Meet Event',
+            'description': 'This is a Google Meet event.',
+            'start': {
+                'dateTime': '2023-01-01T10:00:00',
+                'timeZone': 'UTC',
             },
-        },
-    }
+            'end': {
+                'dateTime': '2023-01-01T11:00:00',
+                'timeZone': 'UTC',
+            },
+            'conferenceData': {
+                'createRequest': {
+                    'requestId': 'abcd1234',
+                },
+            },
+        }
 
-    event = service.events().insert(
-        calendarId='primary',
-        body=event,
-        conferenceDataVersion=1,
-    ).execute()
+        event = service.events().insert(
+            calendarId='primary',
+            body=event,
+            conferenceDataVersion=1,
+        ).execute()
 
-    meeting_link = event['hangoutLink']
-    return meeting_link
+        meeting_link = event['hangoutLink']
+
+        say("Meeting created successfully")
+
+        return meeting_link
+    except:
+        say("Couldn't create meeting")
 
 def driver():
     creds = get_credentials()
     meeting_link = create_meeting_link(creds)
-    copy_to_clipboard(meeting_link)
-    print("Meeting link copied to clipboard.")
-    search_the_web_driver(meeting_link)
+
+    if meeting_link:
+        copy_to_clipboard(meeting_link)
+        say("Meeting link copied to clipboard.")
+        search_the_web_driver(meeting_link, False)

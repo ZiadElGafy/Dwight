@@ -13,6 +13,8 @@ from datetime import datetime
 from datetime import timedelta
 from dateutil import parser
 
+from tools.say import driver as say
+
 TIMEZONE = tzlocal.get_localzone()
 TIMEZONE_OFFSET = (-time.timezone) / (60 * 60)
 
@@ -76,11 +78,12 @@ def add_event_to_calendar(creds, event_object):
     try:
         service = build('calendar', 'v3', credentials = creds)
         event = service.events().insert(calendarId = "primary", body = event_object).execute()
-        print('Event created successfully')
-        print('%s' % (event.get('htmlLink')))
+        say(f"{event.get('summary')} event created successfully")
+        print("Event link:", (event.get('htmlLink')))
         return
     except HttpError as error:
-        print('An error occurred: %s' % error)
+        say("Couldn't create event")
+        print("Error:", error)
 
 def driver():
     creds = get_credentials()

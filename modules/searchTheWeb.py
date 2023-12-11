@@ -2,6 +2,7 @@ import webbrowser
 import threading
 import time
 from tools.getChromePath import driver as get_chrome_path
+from tools.say import driver as say
 
 def search(text):
     words = text.split(" ")
@@ -17,9 +18,13 @@ def search(text):
     browser_path = get_chrome_path()
     webbrowser.get(browser_path).open_new(url)
     
-def driver(text):
+def driver(text, speak):
     if not text:
         text = input("Enter text to search for: ")
+    
+    if speak:
+        say(f"Searching for {text}")
+
     browser_thread = threading.Thread(target=search, args=(text,))
     # Allow thread to run even after program exits
     browser_thread.daemon = True

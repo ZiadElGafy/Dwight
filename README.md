@@ -1,4 +1,4 @@
-# Dwight v0.1.0
+# Dwight v0.2.0
 
 Your everyday personal assistant
 
@@ -48,3 +48,9 @@ To get weather data
 > pip install requests-cache retry-requests numpy pandas
 
 ---
+
+To install TTS library
+
+> pip install pypiwin32
+
+> pip install pyttsx3

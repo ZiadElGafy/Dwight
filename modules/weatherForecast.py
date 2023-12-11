@@ -3,6 +3,7 @@ import requests_cache
 import openmeteo_requests
 from retry_requests import retry
 from tools.getCoordinates import driver as get_coordinates
+from tools.say import driver as say
 from modules.searchTheWeb import driver as search_the_web_driver
 
 TIMEZONE = tzlocal.get_localzone()
@@ -29,10 +30,10 @@ def get_weather_data():
 def get_forecast(response):
     forecast = {}
     current = response.Current()
-    forecast["temperature"] = f"{round(current.Variables(0).Value())}C"
-    forecast["apparent_temperature"] = f"{round(current.Variables(2).Value())}C"
-    forecast["humidity"] = f"{round(current.Variables(1).Value())}%"
-    forecast["wind_speed"] = f"{round(current.Variables(3).Value())} Km/h"
+    forecast["temperature"] = round(current.Variables(0).Value())
+    forecast["apparent_temperature"] = round(current.Variables(2).Value())
+    forecast["humidity"] = round(current.Variables(1).Value())
+    forecast["wind_speed"] = round(current.Variables(3).Value())
     return forecast
 
 
@@ -40,8 +41,11 @@ def driver():
     response = get_weather_data()
     forecast = get_forecast(response)
     print(forecast)
+    say(f"The temperature's {forecast['temperature']} degrees celsius and feels like {forecast['apparent_temperature']}")
+    say(f"Humidity is at {forecast['humidity']}% and wind speed is {forecast['wind_speed']} kilometers per hour")
     choice = input("Would you like to know more weather data? [y/n] ")
     while choice != 'y' and choice != 'n':
         choice = input("Would you like to know more weather data? [y/n] ")
     if choice == 'y':
-        search_the_web_driver("Weather")
+        say("Getting more weather data")
+        search_the_web_driver("Weather", False)

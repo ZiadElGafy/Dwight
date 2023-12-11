@@ -4,6 +4,8 @@ from modules.googleCalendar import driver as google_calendar_driver
 from modules.prayerTimes import driver as prayer_times_driver
 from modules.weatherForecast import driver as weather_forecast_driver
 
+from tools.say import driver as say
+
 def get_input_option(number_of_options):
     try:
         option = int(input())
@@ -18,14 +20,14 @@ def get_input_option(number_of_options):
 
 def main():
     options = ["Search the web", "Prayer times", "Weather forecast", "Schedule a google calendar event", "Schedule a google meet"]
-    print("Welcome, I'm Dwight!\nPlease select one of the following options:")
+    say("Welcome, I'm Dwight! Please select one of the following options")
     for i in range(len(options)):
         print(f"{i + 1}: {options[i]}")
 
     op = get_input_option((len(options)))
 
     if options[op] == "Search the web":
-        search_the_web_driver("")
+        search_the_web_driver("", True)
     elif options[op] == "Schedule a google meet":
         google_meet_driver()
     elif options[op] == "Schedule a google calendar event":
