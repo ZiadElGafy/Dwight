@@ -4,7 +4,7 @@ import time
 
 import os
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv("./dotenv.env")
 
 API_CALL_LIMIT = 1e3
 

@@ -59,11 +59,8 @@ def create_meeting_link(creds):
     meeting_link = event['hangoutLink']
     return meeting_link
 
-
-
 def copy_to_clipboard(text_to_copy):
     pyperclip.copy(text_to_copy)
-
 
 def driver():
     creds = get_credentials()

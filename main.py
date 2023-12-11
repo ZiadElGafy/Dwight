@@ -16,7 +16,7 @@ def get_input_option(number_of_options):
         return get_input_option(number_of_options)
 
 def main():
-    options = ["Search the web", "Prayer times", "Weather forecast", "Schedule a google calendar event", "Schedule a google meet", "Chat GPT"]
+    options = ["Search the web", "Prayer times", "Weather forecast", "Schedule a google calendar event", "Schedule a google meet"]
     print("Welcome, I'm Dwight!\nPlease select one of the following options:")
     for i in range(len(options)):
         print(f"{i + 1}: {options[i]}")
@@ -31,7 +31,6 @@ def main():
         google_calendar_driver()
     elif options[op] == "Prayer times":
         prayer_times_driver()
-
 
 if __name__ == "__main__":
     main()
