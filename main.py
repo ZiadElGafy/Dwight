@@ -2,6 +2,7 @@ from modules.googleMeet import driver as google_meet_driver
 from modules.searchTheWeb import driver as search_the_web_driver
 from modules.googleCalendar import driver as google_calendar_driver
 from modules.prayerTimes import driver as prayer_times_driver
+from modules.weatherForecast import driver as weather_forecast_driver
 
 def get_input_option(number_of_options):
     try:
@@ -31,6 +32,8 @@ def main():
         google_calendar_driver()
     elif options[op] == "Prayer times":
         prayer_times_driver()
+    elif options[op] == "Weather forecast":
+        weather_forecast_driver()
 
 if __name__ == "__main__":
     main()

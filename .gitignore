@@ -4,3 +4,4 @@ credentials.json
 modules/__pycache__
 tools/__pycache__
 dotenv.env
+.cache.sqlite

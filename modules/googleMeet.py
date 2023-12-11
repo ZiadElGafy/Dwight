@@ -5,7 +5,7 @@ from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
-from tools.copyToClipboard import copy_to_clipboard
+from tools.copyToClipboard import driver as copy_to_clipboard
 from modules.searchTheWeb import driver as search_the_web_driver
 
 SCOPES = ['https://www.googleapis.com/auth/calendar.events']
