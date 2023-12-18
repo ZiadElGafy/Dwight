@@ -3,6 +3,9 @@ token.pickle
 credentials.json
 modules/__pycache__
 tools/__pycache__
+chatbot/__pycache__
+chatbot/controllers/__pycache__
+chatbot/chatdata.pth
 dotenv.env
 .cache.sqlite
 test.py

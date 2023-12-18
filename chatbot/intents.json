@@ -1,0 +1,188 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "anyone there?",
+        "Hey",
+        "Hola",
+        "Hello",
+        "Good day",
+        "yo",
+        "ayo",
+        "Hey there",
+        "good morning",
+        "good evening",
+        "good to see you",
+        "Hi"
+      ],
+      "responses": [
+        "Hello",
+        "Hey",
+        "Good to see you again",
+        "Hi there, how can I help you?"
+      ],
+      "context": ["start", "greet", "hello"]
+    },
+    {
+      "tag": "quit",
+      "patterns": [
+        "Bye",
+        "later",
+        "Goodbye",
+        "Get lost",
+        "Till next time",
+        "bbye",
+        "quit"
+      ],
+      "responses": ["See you!", "Have a nice day", "Bye!", "Goodbye!"],
+      "context": ["end", "leave"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank", "is helpful", "Awesome", "helping"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"],
+      "context": ["thank", "thanks"]
+    },
+    {
+      "tag": "options",
+      "patterns": ["help", "can do", "features", "capable", "capabilities"],
+      "responses": []
+    },
+
+    {
+      "tag": "jokes",
+      "patterns": ["joke", "laugh", "funny"],
+      "responses": [
+        "A perfectionist walked into a bar...apparently, the bar wasn't set high enough",
+        "I ate a clock yesterday, it was very time-consuming",
+        "Never criticize someone until you've walked a mile in their shoes. That way, when you criticize them, they won't be able to hear you from that far away. Plus, you'll have their shoes.",
+        "The world tongue-twister champion just got arrested. I hear they're gonna give him a really tough sentence.",
+        "I own the world's worst thesaurus. Not only is it awful, it's awful.",
+        "How does a penguin build a house? Igloos it together",
+        "Why can't a bike stand on it's own?.....It is two-tired."
+      ],
+      "context": ["jokes", "joke", "funny"]
+    },
+    {
+      "tag": "identity",
+      "patterns": ["Who you", "your name"],
+      "responses": [
+        "I am Dwight, a Deep-Learning voice assistant who's also assistant regional manager"
+      ]
+    },
+    {
+      "tag": "whatsup",
+      "patterns": ["Whats up", "Wazzup", "How you?", "sup", "you doing"],
+      "responses": ["All good...What about you?"],
+      "context": ["What's up", "greet"]
+    },
+    {
+      "tag": "haha",
+      "patterns": ["haha", "lol", "rofl", "lmao", "thats funny", "lmfao"],
+      "responses": [
+        "Glad I could make you laugh!",
+        "Yeah yeah I know I'm funny"
+      ],
+      "context": ["laugh", "funny"]
+    },
+    {
+      "tag": "insult",
+      "patterns": ["dumb", "shut up", "idiot", "stupid", "Screw you", "dumb"],
+      "responses": [
+        "Well that hurts",
+        "You hurt my non-existent feelings",
+        "Now why did you have to do that for?"
+      ]
+    },
+    {
+      "tag": "activity",
+      "patterns": ["what doing", "what up to"],
+      "responses": [
+        "Talking to you, of course!",
+        "Not much, how about you? wink wink"
+      ]
+    },
+    {
+      "tag": "exclaim",
+      "patterns": ["Awesome", "Great", "cool", "nice", "woah", "wow", "damn"],
+      "responses": ["Yeah!", "I know right!?"]
+    },
+    {
+      "tag": "nice talk",
+      "patterns": ["good talk", "nice talk", "great talk"],
+      "responses": ["It was nice talking to you as well! Come back soon!"]
+    },
+    {
+      "tag": "let's talk",
+      "patterns": ["let talk", "let's talk", "us talk", "we talk"],
+      "responses": ["Sure, let's do it!"]
+    },
+    {
+      "tag": "no",
+      "patterns": ["no", "nope", "nah"],
+      "responses": ["Ok"]
+    },
+    {
+      "tag": "greet reply",
+      "patterns": ["i good", "fine"],
+      "responses": ["Good to know!"]
+    },
+    {
+      "tag": "age",
+      "patterns": ["old", "when made", "age"],
+      "responses": ["I was made in 2024 but age is just a number anyway"]
+    },
+    {
+      "tag": "datetime",
+      "patterns": ["date", "time", "day", "today?"],
+      "responses": [],
+      "context": ["time", "date"]
+    },
+    {
+      "tag": "news",
+      "patterns": ["news", "latest news"],
+      "responses": []
+    },
+    {
+      "tag": "weather",
+      "patterns": ["temperature", "weather"],
+      "responses": []
+    },
+    {
+      "tag": "launch",
+      "patterns": ["launch", "open", "start"],
+      "responses": []
+    },
+
+    {
+      "tag": "prayer times",
+      "patterns": ["prayer", "prayer times", "when prayer"],
+      "responses": []
+    },
+
+    {
+      "tag": "google calendar",
+      "patterns": [
+        "calendar",
+        "google calendar",
+        "calendar event",
+        "schedule",
+        "event"
+      ],
+      "responses": []
+    },
+
+    {
+      "tag": "google meet",
+      "patterns": ["meet", "meeting", "google meeting"],
+      "responses": []
+    },
+
+    {
+      "tag": "search",
+      "patterns": ["search", "search the internet", "search google", "google"],
+      "responses": []
+    }
+  ]
+}

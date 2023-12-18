@@ -1,4 +1,4 @@
-# Dwight v0.2.0
+# Dwight v0.3.0
 
 Your everyday personal assistant
 
@@ -54,3 +54,12 @@ To install TTS library
 > pip install pypiwin32
 
 > pip install pyttsx3
+
+
+---
+
+To install libraries for NLP
+
+> pip install spacy nltk --user
+
+> pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
