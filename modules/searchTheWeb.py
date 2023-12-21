@@ -1,6 +1,5 @@
-import webbrowser
-import threading
-import time
+import threading, time, webbrowser
+
 from tools.getChromePath import driver as get_chrome_path
 
 def search(text):

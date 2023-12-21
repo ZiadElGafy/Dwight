@@ -1,10 +1,11 @@
-import tzlocal
-import requests_cache
-import openmeteo_requests
+import openmeteo_requests, requests_cache, tzlocal
+
+from modules.searchTheWeb import driver as search_the_web_driver
+
 from retry_requests import retry
+
 from tools.getCoordinates import driver as get_coordinates
 from tools.say import driver as say
-from modules.searchTheWeb import driver as search_the_web_driver
 
 TIMEZONE = tzlocal.get_localzone()
 

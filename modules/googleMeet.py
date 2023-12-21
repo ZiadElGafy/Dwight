@@ -1,13 +1,14 @@
-import os
-import pickle
-import datetime
+import datetime, os, pickle
+
 from google.auth.transport.requests import Request
-from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+
+from modules.searchTheWeb import driver as search_the_web_driver
+
 from tools.copyToClipboard import driver as copy_to_clipboard
 from tools.say import driver as say
-from modules.searchTheWeb import driver as search_the_web_driver
 
 SCOPES = ['https://www.googleapis.com/auth/calendar.events']
 

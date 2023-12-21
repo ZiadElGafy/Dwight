@@ -1,5 +1,5 @@
 import torch
-from chatbot.model import NeuralNet
+
 from chatbot.nltk_utls import bag_of_words, tokenize
 
 def driver(intents, all_words, device, model, tags, msg):

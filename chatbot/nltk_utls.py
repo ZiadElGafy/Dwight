@@ -1,6 +1,8 @@
-import numpy as np
 import nltk
+import numpy as np
+
 from nltk.stem.porter import PorterStemmer
+
 stemmer = PorterStemmer()
 
 def tokenize(sentence):

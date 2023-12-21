@@ -182,7 +182,7 @@
     {
       "tag": "search",
       "patterns": ["search", "search the internet", "search google", "google"],
-      "responses": []
+      "responses": ["On it!"]
     }
   ]
 }

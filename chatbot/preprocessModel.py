@@ -1,4 +1,7 @@
-import os, json, torch
+import json
+import os
+import torch
+
 from chatbot.model import NeuralNet
 
 def driver():

@@ -1,9 +1,10 @@
+import json, torch
 import numpy as np
-import json,torch
 import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
-from nltk_utls import bag_of_words, tokenize, stem
+
 from model import NeuralNet
+from nltk_utls import bag_of_words, stem, tokenize
+from torch.utils.data import DataLoader, Dataset
  
 with open('intents.json', 'r') as f:
     intents = json.load(f)

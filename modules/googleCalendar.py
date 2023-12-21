@@ -3,15 +3,15 @@ import os.path
 import time
 import tzlocal
 
+from datetime import datetime
+from datetime import timedelta
+from dateutil import parser
+
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-
-from datetime import datetime
-from datetime import timedelta
-from dateutil import parser
 
 from tools.say import driver as say
 
