@@ -73,4 +73,4 @@ def driver():
     if meeting_link:
         copy_to_clipboard(meeting_link)
         say("Meeting link copied to clipboard.")
-        search_the_web_driver(meeting_link, False)
+        search_the_web_driver(meeting_link)

@@ -45,7 +45,10 @@ def driver():
     say(f"Humidity is at {forecast['humidity']}% and wind speed is {forecast['wind_speed']} kilometers per hour")
     choice = input("Would you like to know more weather data? [y/n] ")
     while choice != 'y' and choice != 'n':
-        choice = input("Would you like to know more weather data? [y/n] ")
-    if choice == 'y':
+        say("Would you like to know more weather data?")
+        choice = input()
+    
+    yes = ["yes", "yeah", "yup", "positive", "affirmative"]
+    if choice.to_lower() in yes:
         say("Getting more weather data")
-        search_the_web_driver("Weather", False)
+        search_the_web_driver("Weather")

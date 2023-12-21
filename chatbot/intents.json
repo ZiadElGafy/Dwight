@@ -68,7 +68,7 @@
       "tag": "identity",
       "patterns": ["Who you", "your name"],
       "responses": [
-        "I am Dwight, a Deep-Learning voice assistant who's also assistant regional manager"
+        "I am Dwight, a deep Learning voice assistant who also happens to be assistant regional manager"
       ]
     },
     {

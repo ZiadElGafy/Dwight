@@ -24,6 +24,7 @@ def filter_timings(now, query_time, timings):
 		hour = int(timings[prayer][:2])
 		minute = int(timings[prayer][3:6])
 		prayer_time = datetime.datetime(query_time.year, query_time.month, query_time.day, hour, minute, 0)
+		
 		if prayer_time > now:
 			prayer_time_str = prayer_time.strftime("%I:%M %p")
 			filtered_timings.append([prayer, prayer_time_str, (prayer_time - now).seconds])
@@ -58,7 +59,7 @@ def driver():
 	prayer_times_tomorrow = get_prayer_times(now, now + datetime.timedelta(hours = 24), 1)
 
 	if prayer_times_today == None or prayer_times_tomorrow == None:
-		print("Couldn't get prayer times")
+		say("Couldn't get prayer times")
 		return
 
 	prayer_times = combine_prayers(prayer_times_today, prayer_times_tomorrow)
