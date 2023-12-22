@@ -1,4 +1,6 @@
-import openmeteo_requests, requests_cache, tzlocal
+import openmeteo_requests
+import requests_cache
+import tzlocal
 
 from modules.searchTheWeb import driver as search_the_web_driver
 

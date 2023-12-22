@@ -1,4 +1,6 @@
-import datetime, os, pickle
+import datetime
+import os
+import pickle
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials

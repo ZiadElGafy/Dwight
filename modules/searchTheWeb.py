@@ -1,4 +1,6 @@
-import threading, time, webbrowser
+import threading
+import time
+import webbrowser
 
 from tools.getChromePath import driver as get_chrome_path
 

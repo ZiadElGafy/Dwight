@@ -1,4 +1,6 @@
-import datetime, requests, time
+import datetime
+import requests
+import time
 
 from tools.getCoordinates import driver as get_coordinates
 from tools.say import driver as say
