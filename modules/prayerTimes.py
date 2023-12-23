@@ -5,7 +5,7 @@ import time
 from tools.getCoordinates import driver as get_coordinates
 from tools.say import driver as say
 
-API_CALL_LIMIT = 1e3
+API_CALL_LIMIT = 100
 
 def get_url(query_time):
 	year = query_time.year
@@ -53,22 +53,3 @@ def combine_prayers(list1, list2):
 		combined_list.append(item)
 
 	return combined_list
-
-def driver():
-	now = datetime.datetime.now()
-	prayer_times_today = get_prayer_times(now, now, 1)
-	prayer_times_tomorrow = get_prayer_times(now, now + datetime.timedelta(hours = 24), 1)
-
-	if prayer_times_today == None or prayer_times_tomorrow == None:
-		say("Couldn't get prayer times")
-		return
-
-	prayer_times = combine_prayers(prayer_times_today, prayer_times_tomorrow)
-	next_prayer = prayer_times[0]
-	hours_left = prayer_times[0][2] // (60 * 60)
-	minutes_left = prayer_times[0][2] // 60 % 60
-
-	say(f"{hours_left} hours and {minutes_left} minutes till {next_prayer[0]}")
-	print(prayer_times)
-	
-	return prayer_times
