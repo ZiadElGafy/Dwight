@@ -1,3 +1,4 @@
+from chatbot.controllers.googleMeetController import driver as google_meet_controller
 from chatbot.controllers.prayerTimesController import driver as prayer_times_controller
 from chatbot.controllers.searchTheWebController import driver as search_the_web_controller
 from chatbot.identifyTag import driver as get_tag
@@ -16,6 +17,8 @@ def execute_prompt(intents, tag, prompt):
         search_the_web_controller(prompt)
     elif tag == "prayer times":
         prayer_times_controller()
+    elif tag == "google meet":
+        google_meet_controller()
 
 def driver(intents, all_words, device, model, tags):
     sentence = input("You: ")

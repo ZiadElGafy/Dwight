@@ -154,13 +154,11 @@
       "patterns": ["launch", "open", "start"],
       "responses": []
     },
-
     {
       "tag": "prayer times",
       "patterns": ["prayer", "prayer times", "when prayer"],
       "responses": []
     },
-
     {
       "tag": "google calendar",
       "patterns": [
@@ -172,13 +170,11 @@
       ],
       "responses": []
     },
-
     {
       "tag": "google meet",
-      "patterns": ["meet", "meeting", "google meeting"],
+      "patterns": ["meet", "meeting", "google meeting", "google meet"],
       "responses": []
     },
-
     {
       "tag": "search",
       "patterns": ["search", "search the internet", "search google", "google"],
