@@ -1,20 +1,10 @@
-from modules.searchTheWeb import driver as search_the_web_driver
+import threading
+import time
+
+from modules.searchTheWeb import search
+from modules.searchTheWeb import trim
 
 from tools.say import driver as say
-
-def trim(text):
-    limiters = ["search ",
-                "google ",
-                "search for ",
-                "search google for ",
-                "search the web for ",
-                "search the internet for ",]
-
-    for limiter in limiters:
-        segments = text.split(limiter)
-        text = segments[-1]
-
-    return segments[-1]
 
 def driver(text):
     text = trim(text)
@@ -22,6 +12,10 @@ def driver(text):
     if not text:
         say("What do you want to search for?")
         text = input()
-        say("On it!")
 
-    search_the_web_driver(text)
+    say("On it!")
+    browser_thread = threading.Thread(target=search, args=(text,))
+    # Allow thread to run even after program exits
+    browser_thread.daemon = True
+    browser_thread.start()
+    time.sleep(0.5)

@@ -2,7 +2,7 @@ import openmeteo_requests
 import requests_cache
 import tzlocal
 
-from modules.searchTheWeb import driver as search_the_web_driver
+from chatbot.controllers.searchTheWebController import driver as search_the_web_controller
 
 from retry_requests import retry
 
@@ -54,4 +54,4 @@ def driver():
     yes = ["yes", "yeah", "yup", "positive", "affirmative"]
     if choice.to_lower() in yes:
         say("Getting more weather data")
-        search_the_web_driver("Weather")
+        search_the_web_controller("Weather")

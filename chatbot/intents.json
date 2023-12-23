@@ -88,7 +88,7 @@
     },
     {
       "tag": "insult",
-      "patterns": ["dumb", "shut up", "idiot", "stupid", "Screw you", "dumb"],
+      "patterns": ["dumb", "shut up", "idiot", "stupid", "Screw you"],
       "responses": [
         "Well that hurts",
         "You hurt my non-existent feelings",
@@ -182,7 +182,7 @@
     {
       "tag": "search",
       "patterns": ["search", "search the internet", "search google", "google"],
-      "responses": ["On it!"]
+      "responses": []
     }
   ]
 }

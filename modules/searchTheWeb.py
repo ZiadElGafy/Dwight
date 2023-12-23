@@ -1,8 +1,20 @@
-import threading
-import time
 import webbrowser
 
 from tools.getChromePath import driver as get_chrome_path
+
+def trim(text):
+    limiters = ["search the internet for ""search ",
+                "search the web for ",
+                "search google for ",
+                "search for ",
+                "google ",
+                "search "]
+
+    for limiter in limiters:
+        segments = text.split(limiter)
+        text = segments[-1]
+
+    return segments[-1]
 
 def search(text):
     words = text.split(" ")
@@ -17,10 +29,3 @@ def search(text):
     
     browser_path = get_chrome_path()
     webbrowser.get(browser_path).open_new(url)
-    
-def driver(text):
-    browser_thread = threading.Thread(target=search, args=(text,))
-    # Allow thread to run even after program exits
-    browser_thread.daemon = True
-    browser_thread.start()
-    time.sleep(0.5)

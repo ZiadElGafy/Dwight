@@ -2,12 +2,12 @@ import datetime
 import os
 import pickle
 
+from chatbot.controllers.searchTheWebController import driver as search_the_web_controller
+
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-
-from modules.searchTheWeb import driver as search_the_web_driver
 
 from tools.copyToClipboard import driver as copy_to_clipboard
 from tools.say import driver as say
@@ -76,4 +76,4 @@ def driver():
     if meeting_link:
         copy_to_clipboard(meeting_link)
         say("Meeting link copied to clipboard.")
-        search_the_web_driver(meeting_link)
+        search_the_web_controller(meeting_link)
