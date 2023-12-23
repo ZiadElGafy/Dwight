@@ -3,16 +3,21 @@ import webbrowser
 from tools.getChromePath import driver as get_chrome_path
 
 def trim(text):
-    limiters = ["search the internet for ""search ",
-                "search the web for ",
-                "search google for ",
-                "search for ",
-                "google ",
-                "search "]
+    limiters = ["search the internet for",
+                "search the internet"
+                "search the web for",
+                "search the web",
+                "search google for",
+                "search google",
+                "search for",
+                "google",
+                "search"]
 
     for limiter in limiters:
         segments = text.split(limiter)
         text = segments[-1]
+        if len(text) > 0 and text[0] == ' ':
+            text = text[1:]
 
     return segments[-1]
 

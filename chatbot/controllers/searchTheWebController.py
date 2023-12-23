@@ -13,7 +13,6 @@ def driver(text):
         say("What do you want to search for?")
         text = input()
 
-    say("On it!")
     browser_thread = threading.Thread(target=search, args=(text,))
     # Allow thread to run even after program exits
     browser_thread.daemon = True
