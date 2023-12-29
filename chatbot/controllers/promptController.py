@@ -1,4 +1,5 @@
 from chatbot.controllers.googleMeetController import driver as google_meet_controller
+from chatbot.controllers.googleCalendarController import driver as google_calendar_controller
 from chatbot.controllers.prayerTimesController import driver as prayer_times_controller
 from chatbot.controllers.searchTheWebController import driver as search_the_web_controller
 from chatbot.controllers.weatherForecastController import driver as weather_forecast_controller
@@ -22,6 +23,8 @@ def execute_prompt(intents, tag, prompt):
         google_meet_controller()
     elif tag == "weather":
         weather_forecast_controller()
+    elif tag == "google calendar":
+        google_calendar_controller(prompt)
 
 def driver(intents, all_words, device, model, tags):
     sentence = input("You: ")
