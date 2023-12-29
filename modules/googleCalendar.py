@@ -106,7 +106,7 @@ def get_day(month, year):
     try:
         day = int(input())
 
-        if day < 0 or day > days:
+        if day <= 0 or day > days:
             raise Exception()
         
         day_str = str(day)
