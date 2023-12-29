@@ -7,7 +7,8 @@ from modules.searchTheWeb import trim
 from tools.say import driver as say
 
 def driver(text):
-    text = trim(text)
+    if '.' not in text:
+        text = trim(text)
     
     if not text:
         say("What do you want to search for?")
