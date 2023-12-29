@@ -20,7 +20,7 @@ def driver():
     say("Would you like to know more weather data?")
     choice = input()
 
-    yes = ["yes", "yeah", "yup", "positive", "affirmative"]
+    yes = ["yes", "yeah", "yup", "yep", "positive", "affirmative", "sure", "why not"]
     if choice.lower() in yes:
         say("Getting more weather data")
         search_the_web_controller("Weather")
