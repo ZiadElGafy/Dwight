@@ -1,4 +1,4 @@
-# Dwight v0.3.5
+# Dwight v0.3.7
 
 Your everyday personal assistant
 
@@ -65,3 +65,9 @@ To install libraries for NLP
 > pip install --upgrade nltk
 
 > pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+---
+
+To install google sheets api library
+
+> pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
