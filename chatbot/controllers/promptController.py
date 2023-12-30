@@ -1,5 +1,6 @@
 from chatbot.controllers.googleMeetController import driver as google_meet_controller
 from chatbot.controllers.googleCalendarController import driver as google_calendar_controller
+from chatbot.controllers.gptController import driver as gpt_controller
 from chatbot.controllers.prayerTimesController import driver as prayer_times_controller
 from chatbot.controllers.searchTheWebController import driver as search_the_web_controller
 from chatbot.controllers.weatherForecastController import driver as weather_forecast_controller
@@ -14,7 +15,7 @@ def execute_prompt(intents, tag, prompt):
         say(response)
 
     if tag == "unknown":
-        search_the_web_controller(prompt)
+        gpt_controller(prompt)
     elif tag == "search":
         search_the_web_controller(prompt)
     elif tag == "prayer times":
