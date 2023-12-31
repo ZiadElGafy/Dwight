@@ -1,3 +1,5 @@
+from controllers.datetimeController import get_date as date_controller
+from controllers.datetimeController import get_time as time_controller
 from controllers.googleMeetController import driver as google_meet_controller
 from controllers.googleCalendarController import driver as google_calendar_controller
 from controllers.gptController import clear_gpt_thread
@@ -34,6 +36,10 @@ def execute_prompt(intents, tag, prompt):
             weather_forecast_controller()
         elif tag == "google calendar":
             google_calendar_controller(prompt)
+        elif tag == "date":
+            date_controller()
+        elif tag == "time":
+            time_controller()
 
 def driver(intents, all_words, device, model, tags):
     sentence = input("You: ")

@@ -134,10 +134,14 @@
       "responses": ["I was made in 2024 but age is just a number anyway"]
     },
     {
-      "tag": "datetime",
-      "patterns": ["date", "time", "day", "today?"],
-      "responses": [],
-      "context": ["time", "date"]
+      "tag": "date",
+      "patterns": ["date", "day", "today?"],
+      "responses": []
+    },
+    {
+      "tag": "time",
+      "patterns": ["time now", "time"],
+      "responses": []
     },
     {
       "tag": "news",

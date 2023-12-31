@@ -17,7 +17,7 @@ def driver(intents, all_words, device, model, tags, msg):
     print(tag, probs[0][predicted.item()])
     prob = probs[0][predicted.item()]
 
-    if prob.item() > 0.85:
+    if prob.item() > 0.75:
         return tag
     
     return "unknown"
