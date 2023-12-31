@@ -1,4 +1,4 @@
-from chatbot.controllers.promptController import driver as get_prompt
+from controllers.promptController import driver as get_prompt
 from chatbot.preprocessModel import driver as preprocess_model
 
 def main():

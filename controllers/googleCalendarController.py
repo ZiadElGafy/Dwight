@@ -1,4 +1,4 @@
-from chatbot.controllers.searchTheWebController import driver as search_the_web_controller
+from controllers.searchTheWebController import driver as search_the_web_controller
 
 from modules.googleCalendar import add_event_to_calendar
 from modules.googleCalendar import create_event

@@ -1,4 +1,4 @@
-from chatbot.controllers.searchTheWebController import driver as search_the_web_controller
+from .searchTheWebController import driver as search_the_web_controller
 
 from modules.googleMeet import create_meeting_link
 from modules.googleMeet import get_credentials

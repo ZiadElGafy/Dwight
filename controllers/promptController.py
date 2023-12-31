@@ -1,11 +1,11 @@
-from chatbot.controllers.googleMeetController import driver as google_meet_controller
-from chatbot.controllers.googleCalendarController import driver as google_calendar_controller
-from chatbot.controllers.gptController import clear_gpt_thread
-from chatbot.controllers.gptController import driver as gpt_controller
-from chatbot.controllers.gptController import thread_timed_out
-from chatbot.controllers.prayerTimesController import driver as prayer_times_controller
-from chatbot.controllers.searchTheWebController import driver as search_the_web_controller
-from chatbot.controllers.weatherForecastController import driver as weather_forecast_controller
+from controllers.googleMeetController import driver as google_meet_controller
+from controllers.googleCalendarController import driver as google_calendar_controller
+from controllers.gptController import clear_gpt_thread
+from controllers.gptController import driver as gpt_controller
+from controllers.gptController import thread_timed_out
+from controllers.prayerTimesController import driver as prayer_times_controller
+from controllers.searchTheWebController import driver as search_the_web_controller
+from controllers.weatherForecastController import driver as weather_forecast_controller
 from chatbot.identifyTag import driver as get_tag
 from chatbot.respond import driver as get_response
 

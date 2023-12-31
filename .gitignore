@@ -2,6 +2,7 @@ token.json
 token.pickle
 credentials.json
 modules/__pycache__
+controllers/__pycache__
 tools/__pycache__
 chatbot/__pycache__
 chatbot/controllers/__pycache__
