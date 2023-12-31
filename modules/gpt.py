@@ -14,19 +14,14 @@ def read_json():
 
 def write_json(content):
     with open(JSON_FILE, 'w') as file:
-        json.dump(content, file, indent=4)
+        json.dump(content, file, indent = 4)
 
 def clear_history(entire_file, chat_history):
     if entire_file:
-        add_to_sheet(chat_history[1:])
         chat_history.clear()
         chat_history.append(SYSTEM_PROMPT)
         write_json(chat_history)
     else:
-        add_to_sheet(chat_history[1:3])
         chat_history = [chat_history[0]] + chat_history[3:]
     
     return chat_history
-
-def add_to_sheet(content):
-    pass
