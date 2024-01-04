@@ -1,12 +1,20 @@
-token.json
-token.pickle
+# G Suite tokens
+googleCalendarToken.json
+googleSheetsToken.json
+googleMeetToken.pickle
+# G Suite Credentials
 credentials.json
 modules/__pycache__
+# Trained model data
+chatbot/chatdata.pth
+# .env
+dotenv.env
+# __pycache__
 controllers/__pycache__
 tools/__pycache__
 chatbot/__pycache__
 chatbot/controllers/__pycache__
-chatbot/chatdata.pth
-dotenv.env
+# cache
 .cache.sqlite
+# Test files
 test.py

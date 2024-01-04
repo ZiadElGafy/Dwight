@@ -11,7 +11,7 @@ SCOPES = ['https://www.googleapis.com/auth/calendar.events']
 
 def get_credentials():
     creds = None
-    token_file = 'token.pickle'
+    token_file = 'googleMeetToken.pickle'
 
     try:
         if os.path.exists(token_file):
