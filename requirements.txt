@@ -1,0 +1,24 @@
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pyperclip
+python-dotenv
+tzlocal
+geocoder
+geopy
+openmeteo-requests
+requests-cache
+retry-requests
+numpy
+pandas
+pypiwin32
+pyttsx3
+spacy
+nltk
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
+torchaudio --index-url https://download.pytorch.org/whl/cpu
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+openai
