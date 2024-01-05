@@ -183,6 +183,28 @@
       "tag": "search",
       "patterns": ["search", "search the internet", "search google", "google"],
       "responses": ["On it!"]
+    },
+    {
+      "tag": "click",
+      "patterns": [
+        "click",
+        "double click",
+        "doubleclick",
+        "press",
+        "tap",
+        "click on",
+        "double click on",
+        "press on",
+        "tap on",
+        "click the",
+        "press the",
+        "tap the",
+        "double click the",
+        "click button",
+        "press button",
+        "tap button"
+      ],
+      "responses": []
     }
   ]
 }

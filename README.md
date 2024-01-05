@@ -1,4 +1,4 @@
-# Dwight v0.3.9
+# Dwight v0.3.10
 
 Your everyday personal assistant.
 
