@@ -24,3 +24,7 @@ google-auth-oauthlib
 openai
 pytesseract
 pyautogui
+SpeechRecognition
+pyaudio
+wheel
+playsound==1.2.2

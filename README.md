@@ -1,4 +1,4 @@
-# Dwight v0.3.10
+# Dwight v0.4.0
 
 Your everyday personal assistant.
 
@@ -21,4 +21,4 @@ Google cloud project with permissions for the following enabled:
 
 # Getting Started
 
-> python chatbot/intents.json
+> python chatbot/train.py
