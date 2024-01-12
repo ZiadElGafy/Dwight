@@ -8,6 +8,7 @@ from controllers.gptController import thread_timed_out
 from controllers.prayerTimesController import driver as prayer_times_controller
 from controllers.searchTheWebController import driver as search_the_web_controller
 from controllers.weatherForecastController import driver as weather_forecast_controller
+from controllers.mouseClickController import driver as mouse_click_controller
 from chatbot.identifyTag import driver as get_tag
 from chatbot.respond import driver as get_response
 
@@ -40,8 +41,12 @@ def execute_prompt(intents, tag, prompt):
             date_controller()
         elif tag == "time":
             time_controller()
+        elif tag == "click":
+            mouse_click_controller(prompt)
 
 def driver(intents, all_words, device, model, tags):
-    sentence = input("You: ")
+    sentence = None
+    while not sentence:
+        sentence = input("You: ")
     tag = get_tag(intents, all_words, device, model, tags, sentence)
     execute_prompt(intents, tag, sentence)

@@ -2,5 +2,22 @@
     {
         "role": "system",
         "content": "Your name is Dwight, you're a windows voice assistant. Keep all your answers as concise as possible."
+    },
+    {
+        "role": "user",
+        "content": "and newyork?"
+    },
+    {
+        "role": "assistant",
+        "content": "US state."
+    },
+    {
+        "role": "user",
+        "content": "and california?"
+    },
+    {
+        "role": "assistant",
+        "content": "US state.",
+        "time": "2024-01-12 02:03:18"
     }
 ]
