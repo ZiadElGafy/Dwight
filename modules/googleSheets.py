@@ -1,5 +1,4 @@
 import os.path
-import pysheets
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
