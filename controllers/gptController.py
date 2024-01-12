@@ -43,8 +43,6 @@ def driver(prompt):
     for object in chat_history:
         if "time" in object:
             del object["time"]
-
-    print(chat_history)
     
     new_prompt = {
         "role": "user",

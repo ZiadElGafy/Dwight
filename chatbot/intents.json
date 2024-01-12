@@ -4,91 +4,120 @@
       "tag": "greeting",
       "patterns": [
         "anyone there?",
-        "Hey",
-        "Hola",
-        "Hello",
-        "Good day",
+        "hey",
+        "hola",
+        "hello",
+        "good day",
         "yo",
         "ayo",
-        "Hey there",
+        "hey there",
         "good morning",
         "good evening",
         "good to see you",
-        "Hi"
+        "hi"
       ],
       "responses": [
         "Hello",
         "Hey",
         "Good to see you again",
         "Hi there, how can I help you?"
+      ]
+    },
+    {
+      "tag": "nice to meet you",
+      "patterns": [
+        "nice to meet you",
+        "nice meeting you",
+        "pleasure to meet you",
+        "pleasure meeting you"
       ],
-      "context": ["start", "greet", "hello"]
+      "responses": [
+        "The pleasure is mine!"
+      ]
     },
     {
       "tag": "quit",
       "patterns": [
-        "Bye",
+        "bye",
         "later",
-        "Goodbye",
-        "Get lost",
-        "Till next time",
+        "goodbye",
+        "get lost",
+        "till next time",
         "bbye",
         "quit"
       ],
-      "responses": ["See you!", "Have a nice day", "Bye!", "Goodbye!"],
-      "context": ["end", "leave"]
+      "responses": ["See you!", "Have a nice day", "Bye!", "Goodbye!"]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank", "is helpful", "Awesome", "helping"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"],
-      "context": ["thank", "thanks"]
+      "patterns": [
+        "thanks",
+        "thank you",
+        "thanks dwight",
+        "that's helpful",
+        "thanks for the help"
+      ],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
     },
     {
       "tag": "options",
-      "patterns": ["help", "can do", "features", "capable", "capabilities"],
-      "responses": []
+      "patterns": [
+        "what can you do?",
+        "what are you able to do?",
+        "what are you capable of?",
+        "what are you capabilities?",
+        "how can you help?",
+        "what features do you have?"
+      ],
+      "responses": ["Other than being Dunder Mifflin's greatest ever salesman, I can do a lot of things. Try asking me to start a meeting or schedule an event. Maybe search the web, or tell you the weather or the prayer times. No need for your mouse and keyboard as I can click buttons and write for you. Try asking me anything about everything and I may have the answer here or there."]
     },
-
     {
       "tag": "jokes",
-      "patterns": ["joke", "laugh", "funny"],
+      "patterns": [
+        "tell me a joke",
+        "give me a joke",
+        "say something funny",
+        "make me laugh",
+        "tell me another joke"
+      ],
       "responses": [
         "A perfectionist walked into a bar...apparently, the bar wasn't set high enough",
         "I ate a clock yesterday, it was very time-consuming",
         "Never criticize someone until you've walked a mile in their shoes. That way, when you criticize them, they won't be able to hear you from that far away. Plus, you'll have their shoes.",
         "The world tongue-twister champion just got arrested. I hear they're gonna give him a really tough sentence.",
-        "I own the world's worst thesaurus. Not only is it awful, it's awful.",
         "How does a penguin build a house? Igloos it together",
-        "Why can't a bike stand on it's own?.....It is two-tired."
-      ],
-      "context": ["jokes", "joke", "funny"]
+        "Why can't a bike stand on it's own?...It is two-tired."
+      ]
     },
     {
       "tag": "identity",
-      "patterns": ["Who you", "your name"],
+      "patterns": [
+        "who are you?",
+        "what's your name?",
+        "introduce yourself",
+        "who is this?",
+        "tell me about yourself"
+      ],
       "responses": [
-        "I am Dwight, a deep Learning voice assistant who also happens to be assistant regional manager"
+        "I am Dwight, a deep learning voice assistant who also happens to be assistant regional manager."
       ]
     },
     {
       "tag": "whatsup",
-      "patterns": ["Whats up", "Wazzup", "How you?", "sup", "you doing"],
-      "responses": ["All good...What about you?"],
-      "context": ["What's up", "greet"]
+      "patterns": ["whats up", "wazzup", "how are you?", "sup", "how are you doing?"],
+      "responses": ["All good...What about you?"]
     },
     {
       "tag": "haha",
-      "patterns": ["haha", "lol", "rofl", "lmao", "thats funny", "lmfao"],
+      "patterns": ["haha", "lol", "rofl", "lmao", "lmfao", "thats funny"],
       "responses": [
         "Glad I could make you laugh!",
         "Yeah yeah I know I'm funny"
-      ],
-      "context": ["laugh", "funny"]
+      ]
     },
     {
       "tag": "insult",
-      "patterns": ["dumb", "shut up", "idiot", "stupid", "Screw you"],
+      "patterns": ["you're dumb", "shut up", "you're an idiot", "stupid", "screw you"],
       "responses": [
         "Well that hurts",
         "You hurt my non-existent feelings",
@@ -97,7 +126,7 @@
     },
     {
       "tag": "activity",
-      "patterns": ["what doing", "what up to"],
+      "patterns": ["what are you doing?", "what are you up to?"],
       "responses": [
         "Talking to you, of course!",
         "Not much, how about you? wink wink"
@@ -105,84 +134,132 @@
     },
     {
       "tag": "exclaim",
-      "patterns": ["Awesome", "Great", "cool", "nice", "woah", "wow", "damn"],
-      "responses": ["Yeah!", "I know right!?"]
+      "patterns": ["awesome", "great", "cool", "nice", "woah", "wow", "damn"],
+      "responses": ["I know right!?"]
     },
     {
       "tag": "nice talk",
-      "patterns": ["good talk", "nice talk", "great talk"],
-      "responses": ["It was nice talking to you as well! Come back soon!"]
-    },
-    {
-      "tag": "let's talk",
-      "patterns": ["let talk", "let's talk", "us talk", "we talk"],
-      "responses": ["Sure, let's do it!"]
-    },
-    {
-      "tag": "no",
-      "patterns": ["no", "nope", "nah"],
-      "responses": ["Ok"]
+      "patterns": ["good talk", "nice talking to you", "great talk", "pleasure talking to you"],
+      "responses": ["It was nice talking to you as well!"]
     },
     {
       "tag": "greet reply",
-      "patterns": ["i good", "fine"],
+      "patterns": ["i'm good", "fine", "i'm doing great"],
       "responses": ["Good to know!"]
     },
     {
       "tag": "age",
-      "patterns": ["old", "when made", "age"],
-      "responses": ["I was made in 2024 but age is just a number anyway"]
+      "patterns": [
+        "how old are you?",
+        "when were you made",
+        "what's your age?"
+      ],
+      "responses": ["I was made in 2024 but age is just a number anyway."]
     },
     {
       "tag": "date",
-      "patterns": ["date", "day", "today?"],
+      "patterns": [
+        "what's the date?",
+        "what's today's date?",
+        "what day is today",
+        "what day of the month are we",
+        "how far into the month are we",
+        "tell me the date",
+        "give me the date"
+      ],
       "responses": []
     },
     {
       "tag": "time",
-      "patterns": ["time now", "time"],
-      "responses": []
-    },
-    {
-      "tag": "news",
-      "patterns": ["news", "latest news"],
+      "patterns": [
+        "what's the time",
+        "tell the time",
+        "what time is it",
+        "what's the time now",
+        "give me the time"
+      ],
       "responses": []
     },
     {
       "tag": "weather",
-      "patterns": ["temperature", "weather"],
-      "responses": []
-    },
-    {
-      "tag": "launch",
-      "patterns": ["launch", "open", "start"],
+      "patterns": [
+        "how's the weather like now?",
+        "how's the today's weather",
+        "what's the weather like today",
+        "what's the temperature now?",
+        "what is today's temperature?",
+        "how cold is it?",
+        "how hot is it now?"
+      ],
       "responses": []
     },
     {
       "tag": "prayer times",
-      "patterns": ["prayer", "prayer times", "when prayer"],
+      "patterns": [
+        "prayer times",
+        "when's the next prayer",
+        "give me today's prayer times",
+        "when are today's prayers",
+        "next prayer time"
+      ],
       "responses": []
     },
     {
       "tag": "google calendar",
       "patterns": [
-        "calendar",
-        "google calendar",
-        "calendar event",
-        "schedule",
-        "event"
+        "schedule a google calendar event",
+        "make a new event",
+        "add an event to the calendar",
+        "add a new event", 
+        "schedule an event",
+        "make a calendar event"
       ],
       "responses": []
     },
     {
       "tag": "google meet",
-      "patterns": ["meet", "meeting", "google meeting", "google meet"],
+      "patterns": [
+        "start a google meet",
+        "start a meeting now",
+        "start a call",
+        "make a new call",
+        "make a new meeting",
+        "start a video call"
+      ],
       "responses": []
     },
     {
       "tag": "search",
-      "patterns": ["search", "search the internet", "search google", "google"],
+      "patterns": [
+        "search",
+        "search the internet for",
+        "search the web for",
+        "google",
+        "search on google"
+      ],
       "responses": ["On it!"]
+    },
+    {
+      "tag": "click",
+      "patterns": [
+        "click",
+        "double click",
+        "doubleclick",
+        "press",
+        "tap",
+        "click on",
+        "double click on",
+        "press on",
+        "tap on",
+        "click the",
+        "press the",
+        "tap the",
+        "double click the",
+        "click the button",
+        "press the button",
+        "tap the button"
+      ],
+      "responses": []
     }
   ]
 }

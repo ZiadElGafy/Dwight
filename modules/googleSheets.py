@@ -43,7 +43,6 @@ def append_row(prompt, response, creds):
     body = {'values': [[prompt,response]]}
     sheet_size = get_last_row(service, SPREADSHEET_ID, RANGE_NAME)
     range = f"{RANGE_NAME}!A{sheet_size+1}:B{sheet_size+1}"
-    print(range)
     result = service.spreadsheets().values().append(
     spreadsheetId = SPREADSHEET_ID, range = range,
     valueInputOption="RAW", body=body).execute()

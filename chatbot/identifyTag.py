@@ -14,7 +14,7 @@ def driver(intents, all_words, device, model, tags, msg):
     tag = tags[predicted.item()]
 
     probs = torch.softmax(output, dim=1)
-    print(tag, probs[0][predicted.item()])
+    # print(tag, probs[0][predicted.item()])
     prob = probs[0][predicted.item()]
 
     if prob.item() > 0.75:
