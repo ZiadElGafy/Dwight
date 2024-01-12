@@ -1,4 +1,5 @@
 import os.path
+import pysheets
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -7,7 +8,7 @@ from googleapiclient.discovery import build
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 SPREADSHEET_ID = "1w21g-mn-oYib-13eRGMAv5erRffaraRi4JNAtIRxw9E"
-RANGE_NAME = "A:B"
+RANGE_NAME = "Sheet1"
 
 def get_credentials():
     creds = None
@@ -29,11 +30,23 @@ def get_credentials():
         print("couldn't get credntials")
         return None
 
+def get_last_row(service, spreadsheet_id, range_name):
+    result = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=range_name).execute()
+    values = result.get('values', [])
+
+    if not values:
+        return 0  # No data found, start from the first row
+    else:
+        return len(values)
+
 def append_row(prompt, response, creds):
     service = build("sheets", "v4", credentials=creds)
     body = {'values': [[prompt,response]]}
+    sheet_size = get_last_row(service, SPREADSHEET_ID, RANGE_NAME)
+    range = f"{RANGE_NAME}!A{sheet_size+1}:B{sheet_size+1}"
+    print(range)
     result = service.spreadsheets().values().append(
-    spreadsheetId = SPREADSHEET_ID, range = RANGE_NAME,
+    spreadsheetId = SPREADSHEET_ID, range = range,
     valueInputOption="RAW", body=body).execute()
 
 def driver(prompt,response):
