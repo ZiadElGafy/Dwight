@@ -18,3 +18,5 @@ chatbot/controllers/__pycache__
 .cache.sqlite
 # Test files
 test.py
+# README.md resources
+images
