@@ -70,10 +70,12 @@ In the directory that got opened create a `.vbs`` file and write the following i
 CreateObject("Wscript.Shell").Run "path\to\your\.bat file",0,True
 ```
 
-## Tuning the model's performance
+## Tuning the model's architecture and performance
 
 In the `chatbot/train.py` file, you'll find the following segment:
 
-<img src="images/hyperparameters.png" width="350" alt="hyperparameters">
+<img src="https://github.com/ZiadElGafy/Dwight/assets/74333133/2528342a-2e5b-45be-b362-46932b8ea291" width="350" alt="hyperparameters">
 
 Here you can customize how you want the model to learn.
+
+***And that's all! Feel free to customize Dwight and make the experience truly your own.***
