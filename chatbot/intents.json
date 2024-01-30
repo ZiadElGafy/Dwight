@@ -269,6 +269,23 @@
         "restore"
       ],
       "responses": []
+    },
+    {
+      "tag": "window launcher",
+      "patterns": [
+        "open",
+        "launch",
+        "start",
+        "run",
+        "execute",
+        "close",
+        "quit",
+        "exit",
+        "stop",
+        "end",
+        "terminate"
+      ],
+      "responses": []
     }
   ]
 }

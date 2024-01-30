@@ -1,3 +1,4 @@
+from controllers.applicationLauncherController import driver as application_launcher_controller
 from controllers.datetimeController import get_date as date_controller
 from controllers.datetimeController import get_time as time_controller
 from controllers.googleMeetController import driver as google_meet_controller
@@ -46,6 +47,8 @@ def execute_prompt(intents, tag, prompt):
             mouse_click_controller(prompt)
         elif tag == "resize window":
             resize_window_controller(prompt)
+        elif tag == "window launcher":
+            application_launcher_controller(prompt)
 
 def driver(intents, all_words, device, model, tags):
     sentence = None
