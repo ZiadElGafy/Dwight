@@ -260,6 +260,15 @@
         "tap the button"
       ],
       "responses": []
+    },
+    {
+      "tag": "resize window",
+      "patterns": [
+        "minimize",
+        "maximize",
+        "restore"
+      ],
+      "responses": []
     }
   ]
 }

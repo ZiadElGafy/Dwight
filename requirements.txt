@@ -24,3 +24,4 @@ google-auth-oauthlib
 openai
 pytesseract
 pyautogui
+pygetwindow
